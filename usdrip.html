@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>USDRIP LOGIN</title>
+    <style>
+        body { background-color:#000000}
+         h2  {color:#149414;}
+        p   {color:#149414;}
+    </style>
+    <script>
+  function checkPassword() {
+   var password = document.getElementById("passwordBox");
+   var passwordText = password.value;
+   if(passwordText == "USDR1P") {
+    return true;
+   }
+   alert("Incorrect - 3 Attempts Remaining");
+   return false;
+   }
+    </script>
+</head>
+
+<body>
+    <p>Input USDRIP Research Portal passcode: <input id="passwordBox" type="password" /></p>
+    <a href="cryptid.html" onclick="return checkPassword();">
+        Click to access USDRIP Research Portal
+    </a>
+    <div>
+        <p> Click here to escape </p>
+        <a href="index.html"> Home Page </a>
+    </div>
+</body>
+
+</html>
