@@ -1,52 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <center>
-      <title> OhhBirb#5980 </title>
-			<link rel="icon" type="image/x-con" href="./images/favicon.png">
-      <style>
-      body{background-color:#F1E9F1;}
-      h1  {font-family:Courier New; color:#8c1eff}
-      h2  {font-family:Courier New; color:#8c1eff}
-      p   {font-family:Courier New; color:#f222ff};
-    </style>
-  </head>
-  <body>
-    <h1 style="color:#FF8604;font-family:Courier New;"> Welcome</h1>
-    <h2 style="font-family:Courier New;"> Currently Running: OhhBirb.exe </h2> 
-    <button type="button" onClick="myFunction()"> button.exe </button>
-    <p id="demo"> What do it do? </p>
+
+<head>
+    <title>Start-Up</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <audio id="audio" src="/audio/Better Call Saul.mp3" autostart="false"></audio>
+    <!--<a onclick="PlaySound()"> Play</a> -->
     <script>
-    function myFunction(){
- document.getElementById("demo").innerHTML = "This, it do this.";
-}
-</script>
-<noscript> Opposite of based, get a script bozo </noscript>
-<div>
-  <h1>aboutMe.txt</h1>
-</div>
-<div>
-  <video width="320" height="240" autoplay loop muted>
-    <source src="videos/video.mp4">
+        function PlaySound() {
+            var sound = document.getElementById("audio");
+            sound.play();
+            setTimeout(function () { location.href = 'index.html'; }, sound.duration * 1000);
+        }
+    </script>
 
-  </video>
-</div>
-<h2>
-  I make stuff sometimes, that is all
-</h2>
-<script>
-  function play() {
-    var audio = document.getElementById("audio");
-    audio.play();
-  }
-</script>
-<div>
-<input type="button" value="Goreset Button" onclick="play()">
-<audio id="audio" src="audio/trick 'r treat (tsuyunoshi & polar).mp3"></audio>
-</div>
+    <button type="button" onclick="PlaySound();">Click to Reboot</button>
+</body>
 
-
-
-<a href="usdrip.html"> Ohoho, what's this? An unknown link? If I were you I'd click! </a>
-  </body>
 </html>
