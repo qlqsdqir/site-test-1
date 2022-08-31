@@ -20,12 +20,29 @@
     </script>
     
 
-    <button type="button" onclick="PlaySound();">Click to Reboot</button>
+    <button type="button" onclick="PlaySound();">Better Dial Lyle</button>
     <div>
     <video width="600" height="600" autoplay loop muted>
         <source src="videos/videoplayback.webm" type="video/mp4">
     </video>
 </div>
+<script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+    }
+</script>
+<h1> I Know EXACTLY Where You Are!</h1>
 </body>
 
 </html>
